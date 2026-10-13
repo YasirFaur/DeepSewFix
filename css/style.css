@@ -224,6 +224,22 @@ li::before {
 li a {
     width: 180px; 
     display: inline-block;
+    text-transform: uppercase;
+}
+
+.help-box {
+  max-width: 460px;
+  margin: 20px auto;
+  padding: 16px 20px;
+  border: 1px dashed rgba(255, 255, 255, .6);
+  border-radius: 6px;
+  text-align: left;
+}
+.help-title { font-weight: bold; }
+.help-box .btn-pad {
+  display: inline-block;
+  margin-top: 8px;
+  text-decoration:underline;
 }
 
 /* Styling for descriptions outside the anchor tag */
@@ -347,3 +363,72 @@ footer {
     font-family: digifaw;
     src: url(../fonts/digifaw.TTF);
 }
+
+.atom {
+  --size: 220px;
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  margin: 30px auto;
+}
+
+.atom-note{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.nucleus {
+  position: absolute; inset: 50%;
+  width: 36px; height: 36px; margin: -18px;
+  border-radius: 50%;
+  background: radial-gradient(#fff, #C8CDD0);
+  color: #0B2A1E; font: bold 14px monospace;
+  display: grid; place-items: center;
+  box-shadow: 0 0 12px rgba(221,225,227,.6);
+}
+.orbit {
+  position: absolute; top: 50%; left: 50%;
+  border: 1px solid rgba(255,255,255,.35);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: spin linear infinite;
+}
+.electron {
+  position: absolute; top: 50%; left: 50%;
+  width: 8px; height: 8px; margin: -4px;
+  border-radius: 50%;
+  background: #C8CDD0;
+  box-shadow: 0 0 6px #fff;
+}
+@keyframes spin {
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .orbit { animation: none; }
+}
+
+
+.qatom {
+  display: block;
+  width: 220px;
+  height: 220px;
+  margin: 30px auto;
+}
+
+.atom-stack {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  margin: 30px auto;
+}
+.atom-stack > .atom,
+.atom-stack > .qatom {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.atom-stack > .show { opacity: 1; }

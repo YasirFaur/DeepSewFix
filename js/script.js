@@ -264,6 +264,8 @@ function initTermsListAutoScroll() {
     termsList.addEventListener('touchend', startAutoScroll, { passive: true });
 }
 
+
+
 // Main event handler to initialize all functions
 document.addEventListener("DOMContentLoaded", () => {
     // 1. Initialize core feature systems
@@ -281,5 +283,6 @@ document.addEventListener("DOMContentLoaded", () => {
     //try { preventInspection(); } catch (e) { console.error(e); }
 
     try { initTermsListAutoScroll(); } catch (e) { console.error(e); }
+
 
 });
