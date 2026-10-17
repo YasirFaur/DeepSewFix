@@ -77,7 +77,8 @@ body {
 }
 
 .site-intro {
-     position: relative;
+    position: relative;
+    
 }
 
 .site-intro p {
@@ -107,10 +108,12 @@ body {
   border-radius: 2px;
   padding: 4px 10px;
   cursor: pointer;
+  transition: background-color 0.5s ease;
 }
 
 .lang-switch button:hover {
-  background: rgba(241, 247, 250, 0.25);
+  background: #fff;
+  color:#017b07;
 }
 
 .lang-switch button.active {
@@ -123,6 +126,18 @@ body {
 .lang-switch button:focus-visible {
   outline: 2px solid #fff;
   outline-offset: 2px;
+}
+
+/* Hide content by default */
+/* Base hidden state */
+.toggle-content {
+  display: none !important;
+}
+
+/* Show content when active class is added */
+/* Active visible state */
+.toggle-content.active {
+  display: block !important;
 }
 
 .site-intro p:lang(ar) {
@@ -320,10 +335,30 @@ header {
     line-height: 1.6;
 }
 
+.site-intro h3{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#content-ar p{
+    display: inline;
+    font-size: 16px;
+    font-family: Tahoma, "Segoe UI", sans-serif;
+    line-height: 1.8;
+}
+
+.toggle-content{
+    display: none;
+}
+
+#board_name{
+    font-size: 20px;
+    font-weight: bold;
+}
 
 /* Footer content centering */
 footer {
-    text-align: center;
+    text-align: center;    
 }
 
 /* Social text button styling */
@@ -336,13 +371,14 @@ footer {
     border-radius: 6px;
     padding: 6px 12px;
     margin: 5px;
-    transition: background-color 0.3s, color 0.3s;
+    
 }
 
 /* Hover effect for buttons */
 .btn-link:hover {
     background-color: #ffffff;
     color: #017b07;
+    
 }
 
 /* Designer name styling */

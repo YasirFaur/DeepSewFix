@@ -265,7 +265,6 @@ function initTermsListAutoScroll() {
 }
 
 
-
 // Main event handler to initialize all functions
 document.addEventListener("DOMContentLoaded", () => {
     // 1. Initialize core feature systems

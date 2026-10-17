@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <!-- Link external CSS stylesheet -->
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <!-- Simple header container -->
+        <header class="main-header">
+            <!-- Brand logo and site title -->
+            <div class="logo">DEEP<span class="sew">SEW</span>FIX</div>
+            <p class="tagline">Circuit Diagnostics & Component-Level Repair.</p>
+        </header>
+
+        <!-- Main body content section -->
+        <main class="main-content">
+            <!-- Simple intro section explaining the deep electronic repair service -->
+            <div class="site-intro">                
+                <div style="display: flex; justify-content: flex-end; gap: 8px; width: 100%;">
+                    <a href="../index.html" class="btn-link" target="_self" rel="noopener noreferrer">Home</a>    
+                </div>
+                <p id="board_name" >Expertise & Methodology</p>               
+            </div>
+
+            <div class="site-intro" style="border: none;">
+                <div class="lang-switch" role="group" aria-label="Language">
+                    <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 20px;">
+                        <button id="btn-ar" onclick="setLang('ar')" class="btn-link">العربية</button>
+                        <button id="btn-en" onclick="setLang('en')" class="btn-link">English</button>
+                        <button id="btn-tr" onclick="setLang('tr')" class="btn-link">Türkçe</button>
+                    </div>
+                </div>
+                
+                <div id="content-ar" class="lang-section" style="display: block; text-align: right; text-align-last: right; direction: rtl;">
+                    <h3 class="toggle-title" id="methodology" style="cursor: pointer;">1. منهجية التشخيص العميق:</h3>
+                    <div class="toggle-content">
+                        <p>نعتمد في DeepSewFix على الفحص على مستوى العناصر الإلكترونية وتتبع مسارات التغذية والتحكم والبيانات بهدف فهم آلية عمل الأقسام ووظائف العناصر. نعزل الأعطال ونحدد موقعها من خلال الأعراض والمقارنة بقياسات مرجعية للوصول إلى المكون التالف واستبداله دون الحاجة لتغيير كامل اللوحة.</p>
+                    </div>                    
+                    
+                    <h3 class="toggle-title" id="measurements" style="cursor: pointer;">2. القياسات المرجعية:</h3>
+                    <div class="toggle-content">
+                        <p>نأخذ قياسات مرجعية مكثفة من لوحات تحكم سليمة مؤكدة في نمط قياس هبوط الجهد، ونمط مقاومة النقطة بالنسبة للأرضي، بالإضافة إلى قياسات الجهود الرئيسية أثناء التشغيل. تتيح هذه القياسات كشف التلف الخفي، وتغني عن الاستبدال بالتجربة الذي يستنزف الوقت والمجهود ويرفع الكلفة.</p>
+                    </div>                    
+
+                    <h3 class="toggle-title" id="documents" style="cursor: pointer;">3. التعامل مع الوثائق المفقودة:</h3>
+                    <div class="toggle-content">
+                        <p>لا تتوفر مخططات رسمية لمعظم لوحات التحكم الصناعية، لذلك نعتمد على الهندسة العكسية لبناء مخططات تظهر مسارات التغذية والتحكم والبيانات ووظيفة كل قسم. ندعمها بالقياسات المرجعية ونوثّقها لتصبح مرجعاً للحالات القادمة.</p>
+                    </div>                    
+
+                    <h3 class="toggle-title" id="quelity" style="cursor: pointer;">4. معايير الجودة:</h3>
+                    <div class="toggle-content">
+                        <p>نبني كل حكم تشخيصي على ركنين:<br>
+                            1.4. القياسات المرجعية: نقارن كل قياس بمرجع مأخوذ من لوحة سليمة مؤكدة، وأي قيمة تخرج عن الهامش المعتمد تُعدّ مشتبهاً بها.<br>
+                            2.4. الإحصاء: نرتّب الأسباب المحتملة حسب تكرارها في مئات التقارير الميدانية.</p>
+                    </div>                    
+
+                    <h3 class="toggle-title" id="improvement" style="cursor: pointer;">5. التحسين المستمر:</h3>
+                    <div class="toggle-content">
+                        <p>مع كل حالة جديدة تُوثَّق وتُضاف إلى التقارير، يتحسّن ترتيب أسباب العطل المحتملة في الحالات القادمة، وتزداد دقة التشخيص وسرعة المعالجة.</p><br>
+                            
+                        <p style="margin-top: 20px; font-weight: bold;">تصفح قائمة اللوحات المتاحة أو تواصل معنا مباشرة عبر واتساب للاستشارة الفنية كما يمكنك ارسال لوحتك للصيانة.</p>
+                    </div>                    
+                </div>
+                
+                <div id="content-en" class="lang-section" style="display: none; direction: ltr; text-align: left;">
+                    <h3 class="toggle-title">Deep Diagnostic Methodology:</h3>
+                    <div class="toggle-content">
+                        <p>At DeepSewFix, we rely on component-level repair and trace power, control, and data paths to understand circuit operations. We isolate faults through symptoms and reference measurements to replace only the damaged component without replacing the entire board.</p>
+                    </div>                    
+                    
+                    <h3 class="toggle-title">Reference Measurements:</h3>
+                    <div class="toggle-content">
+                        <p>We collect baseline measurements from verified working boards using diode drop mode, resistance to ground, and live operating voltages. These measurements reveal hidden failures and eliminate trial-and-error replacements.</p>
+                    </div>                    
+
+                    <h3 class="toggle-title">Handling Missing Documentation:</h3>
+                    <div class="toggle-content">
+                        <p>Since official schematics are rarely available for industrial control boards, we use reverse engineering to map power, control, and data paths. We support and document these layouts to serve as future reference guides.</p>
+                    </div>                    
+
+                    <h3 class="toggle-title">Quality Standards:</h3>
+                    <div class="toggle-content">
+                        <p>Every diagnostic decision rests on two pillars:<br>
+                        1. Reference Measurements: Comparing values against known-good boards; any deviation is flagged.<br>
+                        2. Statistical Analysis: Prioritizing potential causes based on historical frequency.</p>
+                    </div>                    
+
+                    <h3 class="toggle-title">Continuous Improvement:</h3>
+                    <div class="toggle-content">
+                        <p>With every documented case added to our records, failure probability rankings improve, increasing diagnostic accuracy and speed for future cases.</p>
+                    
+                        <p style="margin-top: 20px; font-weight: bold;">Browse available boards or contact us directly via WhatsApp for technical consultation or to send your board for repair.</p>
+                    </div>                    
+                </div>
+                
+                <div id="content-tr" class="lang-section" style="display: none; direction: ltr; text-align: left;">
+                    <h3 class="toggle-title">Derin Teşhis Metodolojisi:</h3>
+                    <div class="toggle-content">
+                        <p>DeepSewFix'te, bileşen düzeyinde onarıma ve güç, kontrol ve veri yollarının takibine odaklanıyoruz. Arızaları belirtiler ve referans ölçümlerle izole ederek tüm kartı değiştirmek yerine yalnızca arızalı elemanı değiştiriyoruz.</p>
+                    </div>                    
+                    
+                    <h3 class="toggle-title">Referans Ölçümleri:</h3>
+                    <div class="toggle-content">
+                        <p>Sağlamlığı doğrulanmış kartlardan diyot modu, toprağa göre direnç ve çalışma voltajı ölçümleri alıyoruz. Bu ölçümler gizli arızaları ortaya çıkarır ve deneme-yanılma parça değişimini ortadan kaldırır.</p>
+                    </div>                    
+
+                    <h3 class="toggle-title">Eksik Belgelerle Çalışma:</h3>
+                    <div class="toggle-content">
+                        <p>Endüstriyel kontrol kartları için resmi şemalar nadiren bulunur. Bu nedenle tersine mühendislik ile hatları haritalandırır, referans ölçümlerle destekler ve gelecekteki durumlar için belgeleriz.</p>
+                    </div>                    
+
+                    <h3 class="toggle-title">Kalite Standartları:</h3>
+                    <div class="toggle-content">
+                        <p>Her teşhis kararı iki temel ilkeye dayanır:<br>
+                        1. Referans Ölçümler: Değerleri sağlam kartlarla karşılaştırmak.<br>
+                        2. İstatistik: Olası nedenleri saha raporlarındaki tekrarlanma sıklığına göre sıralamak.</p>
+                    </div>
+                    
+
+                    <h3 class="toggle-title">Sürekli İyileştir:</h3>
+                    <div class="toggle-content">
+                        <p>Raporlara eklenen her yeni durumla birlikte arıza nedenlerinin sıralaması gelişir, teşhis doğruluğu ve işlem hızı artar.</p>
+                        <p style="margin-top: 20px; font-weight: bold;">Mevcut kart listesine göz atın veya teknik danışmanlık ve kart onarımı için doğrudan WhatsApp üzerinden bizimle iletişime geçin.</p>
+                    </div>
+                                                    
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Footer section with social links -->
+        <footer>
+        <!-- Social links as text buttons inside footer -->
+            <div>
+                <a href="https://www.facebook.com/PioneeersTech/" class="btn-link" target="_blank" rel="noopener noreferrer">FaceBook</a>
+                <a href="https://www.linkedin.com/in/yasir-faur-68b66713b/" class="btn-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://www.youtube.com/c/YasirFaur" class="btn-link" target="_blank" rel="noopener noreferrer">YouTube</a>
+                <a href="https://wa.me/905342694115" class="btn-link" target="_blank" rel="noopener noreferrer">WhatsApp</a>        
+            </div>
+        </footer>
+            
+    </body>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/e_m.js"></script>
+
+  
+</html>
