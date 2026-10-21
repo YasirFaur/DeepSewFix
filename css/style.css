@@ -98,7 +98,7 @@ body {
   direction: ltr;
 }
 
-.lang-switch button {
+.lang-switch button, .e_m_btn{
   font-family: monospace;
   font-size: 16px;
   font-weight: bold;
@@ -111,7 +111,7 @@ body {
   transition: background-color 0.5s ease;
 }
 
-.lang-switch button:hover {
+.lang-switch button:hover .e_m_btn:hover{
   background: #fff;
   color:#017b07;
 }
