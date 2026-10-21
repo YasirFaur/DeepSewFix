@@ -1,3 +1,5 @@
+const e_m_title = document.getElementById('e_m');
+
 // Get main language section elements
 // Retrieve all language containers
 const arContent = document.getElementById('content-ar');
@@ -16,6 +18,7 @@ btnAr.onclick = function () {
 arContent.style.display = 'block';
 enContent.style.display = 'none';
 trContent.style.display = 'none';
+e_m_title.innerText = "الخبرة والمنهجية";
 };
 
 // Handle English button click event
@@ -24,6 +27,7 @@ btnEn.onclick = function () {
 arContent.style.display = 'none';
 enContent.style.display = 'block';
 trContent.style.display = 'none';
+e_m_title.innerText = "Expertise & Methodology";
 };
 
 // Handle Turkish button click event
@@ -32,6 +36,7 @@ btnTr.onclick = function () {
 arContent.style.display = 'none';
 enContent.style.display = 'none';
 trContent.style.display = 'block';
+e_m_title.innerText = "Uzmanlık ve Metodoloji";
 };
 
 // Toggle content visibility using class switching
